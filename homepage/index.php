@@ -1,3 +1,6 @@
+<?php   
+    include("../system/security.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    bonjour
+    bonjour <?php echo $_SESSION['username'];?>
 </body>
 </html>
