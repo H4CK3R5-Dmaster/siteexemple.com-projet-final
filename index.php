@@ -43,8 +43,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Acceuil</a></li>
+          <li><a class="nav-link scrollto " href="./auth/register/">Inscription</a></li>
+          <li><a class="nav-link scrollto " href="./auth/login/">Connexion</a></li>
+          <li><a class="nav-link scrollto" href="#about">A propos</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
     
           
