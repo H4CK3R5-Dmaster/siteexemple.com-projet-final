@@ -46,7 +46,7 @@
                 <ul>
                     <li><a class="nav-link scrollto " href="../../index.php">Acceuil</a></li>
                     <li><a class="nav-link scrollto " href="../../auth/register/">Inscription</a></li>
-                    <li><a class="nav-link scrollto active" href="../../auth/login/">Connexion</a></li>
+                    <li><a class="nav-link scrollto active" href="./index.php">Connexion</a></li>
                     <li><a class="nav-link scrollto" href="#about">A propos</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
 
@@ -72,7 +72,7 @@
                                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
                                         <form class="mx-1 mx-md-4" method="POST">
-
+                                            <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>' ;}?>
                                             
 
                                             
@@ -88,7 +88,7 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" id="form3Example4c" class="form-control" name="password" />
+                                                    <input type="password" id="form3Example4c" class="form-control" name="passworde" />
                                                     <label class="form-label" for="form3Example4c">Mot de passe</label>
                                                 </div>
                                             </div>

@@ -13,7 +13,7 @@
             $prenom = $_POST['prenom'];
             $user = $_POST['username'];
             //on crypte le mdp en md5
-            $psw = password_hash($_POST['password'], PASSWORD_BCRYPT);
+            $psw = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             //on va check si le user et le mail existe ou pas 1er temps on prepare la requete SELECT
             $chekUser = $bdd->prepare('SELECT username FROM users WHERE username = ?');
@@ -27,7 +27,7 @@
             if ($chekUser->rowCount() == 0) {
 
                 //on prepare l'insertion dans la bdd
-                $insertUser = $bdd->prepare("INSERT INTO users(nom, prenom, username, password)VALUES(?, ?, ?, ?)");
+                $insertUser = $bdd->prepare("INSERT INTO users(nom, prenom, username, mdp)VALUES(?, ?, ?, ?)");
 
                 //on execute l'insertion
                 $insertUser->execute(array($nom, $prenom, $user, $psw));

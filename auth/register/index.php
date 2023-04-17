@@ -45,7 +45,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto " href="../../index.php">Acceuil</a></li>
-                    <li><a class="nav-link scrollto active" href="../../register/index.php">Inscription</a></li>
+                    <li><a class="nav-link scrollto active" href="./index.php">Inscription</a></li>
                     <li><a class="nav-link scrollto " href="../../auth/login/">Connexion</a></li>
                     <li><a class="nav-link scrollto" href="#about">A propos</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>

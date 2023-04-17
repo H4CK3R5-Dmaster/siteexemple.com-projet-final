@@ -11,5 +11,6 @@
 </head>
 <body>
     bonjour <?php echo $_SESSION['username'];?>
+    <a class="nav-link active btn-outline-success btn"  id="font" href="../system/logout.php">logout</a>
 </body>
 </html>
