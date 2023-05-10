@@ -39,16 +39,19 @@
                     
 
                 } else {
+                    header('HTTP/1.1 401 Unauthorized');
                     $errorMsg = "<script>alert('Wrong password...')</script>";
+                    
                 }
 
             } else {
+                header('HTTP/1.1 401 Unauthorized');
                 $errorMsg = "<script>alert('Username does not exist...')</script>";
             }
            
             
         } else {
-            //si le formulaire n'est pas rempli ou si il manque des choses alors une popup alert apparaitra
+            header('HTTP/1.1 401 Unauthorized');
             $errorMsg = "<script>alert('Please complete all fields...')</script>";
         }
     }
