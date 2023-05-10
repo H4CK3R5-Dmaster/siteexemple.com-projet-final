@@ -40,18 +40,21 @@
 
                 } else {
                     header('HTTP/1.1 401 Unauthorized');
+                    error_log($_SERVER['REMOTE_ADDR'] . ' - ' . date('Y-m-d H:i:s') . ' - ' . $_SERVER['REQUEST_URI'] . ' - Connexion échouée: Nom d\'utilisateur ou mot de passe incorrect' . "\n", 3, 'access.log');
                     $errorMsg = "<script>alert('Wrong password...')</script>";
                     
                 }
 
             } else {
                 header('HTTP/1.1 401 Unauthorized');
+                error_log($_SERVER['REMOTE_ADDR'] . ' - ' . date('Y-m-d H:i:s') . ' - ' . $_SERVER['REQUEST_URI'] . ' - Connexion échouée: Nom d\'utilisateur ou mot de passe incorrect' . "\n", 3, 'access.log');
                 $errorMsg = "<script>alert('Username does not exist...')</script>";
             }
            
             
         } else {
             header('HTTP/1.1 401 Unauthorized');
+            error_log($_SERVER['REMOTE_ADDR'] . ' - ' . date('Y-m-d H:i:s') . ' - ' . $_SERVER['REQUEST_URI'] . ' - Connexion échouée: Nom d\'utilisateur ou mot de passe incorrect' . "\n", 3, 'access.log');
             $errorMsg = "<script>alert('Please complete all fields...')</script>";
         }
     }
